@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Flash Game</title>
+    
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #game {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <embed id="game" src="https://cdn.jsdelivr.net/gh/Games-From-Flash/swf/Flash%20Sonic.swf" type="application/x-shockwave-flash">
+</body>
+</html>

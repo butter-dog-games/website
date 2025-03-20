@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Schoology</title>
+    <link rel="icon" type="image/png" href="https://companieslogo.com/img/128/PWSC-bd0efec9.png?t=1689778039">
+    <style>
+        /* General Styling */
+        body {
+            text-align: center;
+            margin: 50px 20px;
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            color: white;
+        }
+        
+        /* Full-screen background */
+        body {
+            margin: 0;
+            background: url('space-particles.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Title Styling */
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #ff00ff, #007bff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff00ff; }
+            to { text-shadow: 0 0 20px #00ffff; }
+        }
+
+        /* Clock Styling */
+        .clock {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        /* Image Styling */
+        .image {
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+            margin: 20px 0 30px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin: 30px 0;
+        }
+
+        .search-bar {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+            background: #222;
+            color: white;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            background: #444;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        /* Buttons */
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #007bff, #00c3ff);
+            border-radius: 12px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+            min-width: 160px;
+        }
+
+        /* Button Hover Effect */
+        .button:hover {
+            background: linear-gradient(135deg, #00c3ff, #007bff);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent);
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        .button:hover::before {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .button {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+ <p class="title">Websites</p>
+        <p class="title"></p>
+
+    <!-- Image Container with Flexbox -->
+<div class="image-container" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+    <!-- Butter Dog GIF -->
+    <a href="index.html" target="_blank">
+        <img src="butta-dawg-dog-with-the-butta.gif" alt="Butter Dog Logo" class="image">
+    </a>
+
+    <!-- Unblocked Game Union Image -->
+    <a href="https://ubgameunion.neocities.org/">
+        <img src="https://ubgameunion.neocities.org/UBGU%20Member.svg" height="150" width="auto">
+    </a>
+</div>
+
+
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search stuff..." id="searchInput" oninput="searchFunction()">
+    </div>
+    
+    <!-- Clock -->
+        <div id="clock" class="clock"></div>
+    
+
+    <div class="button-container">
+        <a href="ghubold.html" class="button" target="_blank">Ghub Old</a>
+        <a href="ghub2.html" class="button" target="_blank">Ghub New</a>
+        <a href="Ghublight.html" class="button" target="_blank">Ghub Light</a>
+        <a href="kbhgames.html" class="button" target="_blank">KBH Games</a>
+        <a href="internetarchive.html" class="button" target="_blank">Internet Archive</a>
+        <a href="emulator.html" class="button" target="_blank">Emulator</a>
+        <a href="azgames.html" class="button" target="_blank">AZ Games</a>
+        <a href="hahagames.html" class="button" target="_blank">Haha Games</a>
+        <a href="rammerhead.html" class="button" target="_blank">Rammerhead Browser</a>
+        <a href="unblockedbrowser.html" class="button" target="_blank">Unblocked Browser</a>
+        <a href="freedombrowser.html" class="button" target="_blank">Freedom Browser</a>
+        <a href="gbaonline.html" class="button" target="_blank">GBA Online</a>
+        <a href="ballbang.html" class="button" target="_blank">Ballbang Proxy/Games</a>
+        <a href="gamenora.html" class="button" target="_blank">Gamenora</a>
+        <a href="doge.html" class="button" target="_blank">Doge Unblocker</a>
+        <a href="gamefrog.html" class="button" target="_blank">Gamefrog</a>
+        <a href="betterbrowseos.html" class="button" target="_blank">BetterBrowseOS</a>
+        <a href="macos.html" class="button" target="_blank">Mac OS Online</a>
+        <a href="ubuntu.html" class="button" target="_blank">Ubuntu</a>
+        <a href="winxp.html" class="button" target="_blank">Windows XP</a>
+        <a href="win11.html" class="button" target="_blank">Windows 11</a>
+        <a href="win12.html" class="button" target="_blank">Windows 12 (Concept)</a>
+        <a href="win98.html" class="button" target="_blank">Windows 98</a>
+        <a href="winvista.html" class="button" target="_blank">Windows Vista</a>
+        <a href="nealfun.html" class="button" target="_blank">Neal.fun</a>
+        <a href="redexploit.html" class="button" target="_blank">Reds Exploit Corner</a>
+        <a href="cmmka.html" class="button" target="_blank">Astrax Proxy</a>
+        <a href="win7.html" class="button" target="_blank">Windows 7</a>
+        <a href="winme.html" class="button" target="_blank">Windows Me</a>
+        <a href="nettleweb.html" class="button" target="_blank">Nettle Web</a>
+        <a href="tv.html" class="button" target="_blank">TV Garden</a>
+        <a href="plutotv.html" class="button" target="_blank">Pluto TV</a>
+        <a href="hello.html" class="button" target="_blank">Unblocked Games + Proxy</a>
+        <a href="interstellar.html" class="button" target="_blank">Interstellar Proxy</a>
+        <a href="space.html" class="button" target="_blank">Space Proxy</a>
+        <a href="mathisfun.html" class="button" target="_blank">Math Is Fun Proxy</a>
+        <a href="artclass.html" class="button" target="_blank">Art Class Proxy</a>
+        <a href="wsg.html" class="button" target="_blank">Warpstar Games</a>
+        <a href="ruffle.html" class="button" target="_blank">Ruffle Emulator</a>
+        <a href="skippers.html" class="button" target="_blank">Skippers Unblocked Games</a>
+        <a href="funfri.html" class="button" target="_blank">Fun Fri</a>
+    </div>
+
+    <script>
+        // Function to update the clock
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let amPm = hours >= 12 ? 'PM' : 'AM';
+            
+            hours = hours % 12 || 12; // Convert to 12-hour format
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            
+            const timeString = `${hours}:${minutes}:${seconds} ${amPm}`;
+            document.getElementById("clock").textContent = timeString;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        updateClock();  // Initialize the clock immediately
+
+        // Search function (as an example to implement search functionality)
+        function searchFunction() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                let buttonText = button.textContent.toLowerCase();
+                if (buttonText.includes(input)) {
+                    button.style.display = "inline-block";
+                } else {
+                    button.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
