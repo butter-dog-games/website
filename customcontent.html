@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pop {
+        0% { transform: scale(0.8); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    body {
+        font-family: "Monospace", sans-serif;
+        background: linear-gradient(to right, #000000, #6a6073);
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        overflow-x: hidden;
+        animation: fadeIn 1s ease-out;
+    }
+    .c {
+        animation: fadeIn 1.5s ease-out;
+    }
+    .sect {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px auto;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+    }
+    .btn {
+        background: linear-gradient(to right, #00FF00, #90FF00);
+        border: none;
+        border-radius: 12px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-family: "Oxanium", sans-serif;
+        font-size: 18px;
+        color: black;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, background 0.3s;
+    }
+    .btn:hover {
+        background: linear-gradient(to right, #FFD700, #FFA500);
+        transform: scale(1.1);
+    }
+    .hyperlink {
+        color: #00FF00;
+        text-decoration: none;
+        display: block;
+        margin: 5px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        backdrop-filter: blur(5px);
+        transition: background 0.3s, transform 0.2s;
+    }
+    .hyperlink:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+    }
+    #contentFrame {
+        width: 100%;
+        height: 96.5%;
+        display: none;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+  <center>
+    <p class="c" style="font-size: 30; width: 232; margin: 6;">
+    Custom Content</p>
+    <div class="c sect">
+      <p class="c" style="padding: 6 0; margin: 6;">Info: This is
+      not necessarily an unblocker. Certain filters can still block
+      content even after the 'Unblock' button has been pressed.</p>
+      <p class="c" style="padding: 6 0; margin: 6;">CREDITS TO G
+      HUB FOR THE CODE AND BURGER AWESOME FOR THE DESIGN BC I TRIED AND IT GOT MESSED UP</p>
+    </div><button class="c btn" onclick="add()" style=
+    "margin: 0; font-family: oxanium;">Add Content</button>
+    <button class="c btn" onclick="deleteA()" style=
+    "margin: 0; font-family: oxanium;">Delete All</button>
+    <button class="c btn" onclick="closeC()" style=
+    "margin: 0; font-family: oxanium;">Close Content</button>
+    <div class="c" id="contentselect" style=
+    "margin: 6; z-index: 0;"></div>
+    <div class="c" id="ubButton"></div>
+    <div class="c" id="contentFrame" style=
+    "width: 100%; height: 100%; display: none; background: white;">
+    </div>
+    <script>
+    var cs = localStorage.getItem('contents');
+    document.getElementById('contentselect').innerHTML = cs;
+
+    function add() {
+    var name = prompt("Enter the Name Here", "Name Here");
+    if (name === '') {
+    alert('A name is needed.');
+    } else {
+    var link = prompt("Enter the Link Here (Adding the protocol is optional)\nNot all links will work.", "Link Here");
+    if (link.includes('.')) {
+      if (link.includes('http://')) {
+        alert('URL is invalid. (Invalid protocol; "http://" is used.)');
+      } else {
+        if (link.includes('https://')) {
+          link = link;
+        } else {
+          link = 'https://' + link;
+        }
+        contentselect.innerHTML = contentselect.innerHTML + '<a class="hyperlink link txt" onclick="openContent(\'' + link + '\')" style="word-wrap: break-word; margin: 6; z-index: 10;" title="' + name + ' (' + link + ')">' + name + '</a>';
+        localStorage.setItem('contents', contentselect.innerHTML);
+      }
+    } else {
+      alert('URL is invalid. (Invalid domain)');
+    }
+    }
+
+    }
+
+    function deleteA() {
+    if (confirm('Are you sure you want to delete all of your custom buttons? This cannot be undone!') == true) {
+    contentselect.innerHTML = '';
+    localStorage.setItem('contents', contentselect.innerHTML);
+    }
+    }
+
+    function closeC() {
+    contentFrame.innerHTML = '';
+    ubButton.innerHTML = '';
+    contentFrame.style.display = "none";
+    }
+
+    function openContent(url) {
+    ubButton.innerHTML = '<button class="c btn" onclick="unblockC(\'' + url + '\')" style="margin: 6; margin-top: 0; font-family: oxanium;">Open in about:blank</button>';
+    contentFrame.innerHTML = '<hr style="margin: 0; width: 100%; border-radius: 0; background: black;">' + '<p style="position: absolute; width: 100%; text-align: center; color: black;">If your content doesn\'t load, that either means that you made a typo in your URL, or the site refused to connect.</p><object class="c" style="width: 100%; height: 100%;" data="' + url + '"></object>';
+    contentFrame.style.display = "block";
+    }
+
+    function unblockC(url) {
+    var cwindow = window.open('/');
+    cwindow.document.write(`<frameset><frame src="`+ url + `"></frameset>`);
+    }
+    </script>
+  </center>
+</body>
+</html>

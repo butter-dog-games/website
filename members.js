@@ -1,0 +1,3 @@
+function openMembersList() {
+  frame.innerHTML = '<center><p class="c" style="font-size: 20;">Members of the GHub Team:</p><p class="c">Creator of GHub: Jeremy Powell (He did most of the work, lol)</p><p class="c">Owner: Jason Rybak (I am making this site work for securly)</p><p class="c">Co-Ownner: None</p><p class="c">VP Admin: Anonymous</p><p class="c">Editors (5, maximum): Anonymous</p><p class="c">Moderators (9): Anonymous(8), Ceobe</p></center>';
+}

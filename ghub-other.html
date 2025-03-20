@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+	 <script>
+      var urlObj = new window.URL(window.location.href);
+      var url = "https://thegportal.neocities.org/";
+      if (url) {
+        var win;
+ 
+        window.onload = function() {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+				window.location.replace('https://google.com');
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var object = win.document.createElement('object');
+            object.style.border = 'none';
+            object.style.width = '100%';
+            object.style.height = '100%';
+            object.style.margin = '0';
+            object.data = url;
+            win.document.body.appendChild(object);
+          }
+        };
+      }
+ 
+    </script>
+</body>
+</html>

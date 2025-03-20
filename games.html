@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Schoology</title>
+    <link rel="icon" type="image/png" href="https://companieslogo.com/img/128/PWSC-bd0efec9.png?t=1689778039">
+    <style>
+        /* General Styling */
+        body {
+            text-align: center;
+            margin: 50px 20px;
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            color: white;
+        }
+        
+        /* Full-screen background */
+        body {
+            margin: 0;
+            background: url('space-particles.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Title Styling */
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #ff00ff, #007bff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff00ff; }
+            to { text-shadow: 0 0 20px #00ffff; }
+        }
+
+        /* Clock Styling */
+        .clock {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        /* Image Styling */
+        .image {
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+            margin: 20px 0 30px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin: 30px 0;
+        }
+
+        .search-bar {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+            background: #222;
+            color: white;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            background: #444;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        /* Buttons */
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #007bff, #00c3ff);
+            border-radius: 12px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+            min-width: 160px;
+        }
+
+        /* Button Hover Effect */
+        .button:hover {
+            background: linear-gradient(135deg, #00c3ff, #007bff);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent);
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        .button:hover::before {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .button {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+ <p class="title">Games</p>
+ <p class="title">added 14 games</p>
+        <p class="title"></p>
+
+    <!-- Image Container with Flexbox -->
+<div class="image-container" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+    <!-- Butter Dog GIF -->
+    <a href="index.html" target="_blank">
+        <img src="butta-dawg-dog-with-the-butta.gif" alt="Butter Dog Logo" class="image">
+    </a>
+
+    <!-- Unblocked Game Union Image -->
+    <a href="https://ubgameunion.neocities.org/">
+        <img src="https://ubgameunion.neocities.org/UBGU%20Member.svg" height="150" width="auto">
+    </a>
+</div>
+
+
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search stuff..." id="searchInput" oninput="searchFunction()">
+    </div>
+    
+    <!-- Clock -->
+        <div id="clock" class="clock"></div>
+    </div>
+
+    <div class="button-container">
+        <a href="gametest.html" class="button" target="_blank">Minecraft</a>
+        <a href="escaperoad2.html" class="button" target="_blank">Escape Road 2</a>
+        <a href="supermario64.html" class="button" target="_blank">Super Mario 64</a>
+        <a href="mario.html" class="button" target="_blank">Super Mario Bros</a>
+        <a href="supermariokart.html" class="button" target="_blank">Super Mario Kart</a>
+        <a href="doom.html" class="button" target="_blank">Doom (1993)</a>
+        <a href="2048.html" class="button" target="_blank">2048</a>
+        <a href="tetris.html" class="button" target="_blank">Tetris</a>
+        <a href="agar.io.html" class="button" target="_blank">Agar.io</a>
+        <a href="slope.html" class="button" target="_blank">Slope</a>
+        <a href="retrobowl.html" class="button" target="_blank">Retro Bowl</a>
+        <a href="survivor.io.html" class="button" target="_blank">Survivor.io</a>
+        <a href="subwaysurfers.html" class="button" target="_blank">Subway Surfers</a>
+        <a href="sonic4.html" class="button" target="_blank">Sonic The Hedgehog 4: Episode 1</a>
+        <a href="amongus.html" class="button" target="_blank">Among Us</a>
+        <a href="1v1lol.html" class="button" target="_blank">1v1.LOL</a>
+        <a href="jetpack.html" class="button" target="_blank">Jetpack Joyride</a>
+        <a href="wordleunlimited.html" class="button" target="_blank">Wordle +</a>
+        <a href="geometrydash.html" class="button" target="_blank">Geometry Dash</a>
+        <a href="sonicadvance.html" class="button" target="_blank">Sonic Advance</a>
+        <a href="elasticman.html" class="button" target="_blank">Elastic Man</a>
+        <a href="deadshot.html" class="button" target="_blank">DEADSHOT.io</a>
+        <a href="monkeymart.html" class="button" target="_blank">Monkey Mart</a>
+        <a href="crafteagle.html" class="button" target="_blank">Eaglercraft</a>
+        <a href="pacman.html" class="button" target="_blank">Pac-Man</a>
+        <a href="hobo1.html" class="button" target="_blank">Hobo 1</a>
+        <a href="hobo2.html" class="button" target="_blank">Hobo 2</a>
+        <a href="hobo3.html" class="button" target="_blank">Hobo 3</a>
+        <a href="hobo4.html" class="button" target="_blank">Hobo 4</a>
+        <a href="hobo5.html" class="button" target="_blank">Hobo 5</a>
+        <a href="hobo6.html" class="button" target="_blank">Hobo 6</a>
+        <a href="hobo7.html" class="button" target="_blank">Hobo 7</a>
+        <a href="granny.html" class="button" target="_blank">Granny</a>
+        <a href="superhot.html" class="button" target="_blank">Superhot</a>
+        <a href="survivalrace.html" class="button" target="_blank">Survival Race</a>
+        <a href="super-liquid-soccer.html" class="button" target="_blank">Super Liquid Soccer</a>
+        <a href="supersmashflash.html" class="button" target="_blank">Super Smash Flash</a>
+        <a href="sonic.html" class="button" target="_blank">Sonic Flash</a>
+        <a href="escaperoad.html" class="button" target="_blank">Escape Road</a>
+        <a href="crossyroad.html" class="button" target="_blank">Crossy Road</a>
+    </div>
+
+    <script>
+        // Function to update the clock
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let amPm = hours >= 12 ? 'PM' : 'AM';
+            
+            hours = hours % 12 || 12; // Convert to 12-hour format
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            
+            const timeString = `${hours}:${minutes}:${seconds} ${amPm}`;
+            document.getElementById("clock").textContent = timeString;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        updateClock();  // Initialize the clock immediately
+
+        // Search function (as an example to implement search functionality)
+        function searchFunction() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                let buttonText = button.textContent.toLowerCase();
+                if (buttonText.includes(input)) {
+                    button.style.display = "inline-block";
+                } else {
+                    button.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

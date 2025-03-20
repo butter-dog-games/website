@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- title -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelearn</title>
+  <style>
+    .scroll-container {
+      width: 100%;
+      overflow-x: auto; 
+      white-space: nowrap; 
+      padding: 10px 0;
+      border: none;
+    }
+
+    .scroll-content {
+      display: inline-flex; 
+    }
+
+    .button {
+      margin-right: 10px; 
+      padding: 10px 20px;
+      background-color: #C21807;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .button:hover {
+      background-color:#800000;
+    }
+
+
+    /* Add styles for the overlay image */
+    #overlayImage {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      z-index: 9999; /* Above other content */
+      display: block;
+    }
+
+    /* Background styles */
+    body {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-color:#000000;
+    }
+  </style>
+</head>
+<!--buttons-->
+<body>
+<script>NekoType="socks"</script>
+<h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a 
+href="https://webneko.net">Neko</a></h1>
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <button class="button" onclick="changeIframe('https://ev.io')">Ev.io</button>
+      <button class="button" onclick="changeIframe('https://freezeova.global.ssl.fastly.net/index.html')">Freezenova</button>
+      <button class="button" onclick="changeIframe('https://www.mathmasterz.com')">pizzaedition</button>
+      <button class="button" onclick="changeIframe('https://class.happymosaic.ru')">Space</button>
+      <button class="button" onclick="changeIframe('https://bflixz.org')">Bflicks</button>
+      <button class="button" onclick="changeIframe(https://educationworld.neocities.org')">EXThanger</button>
+      <button class="button" onclick="changeIframe('https://connectionsnyt.com%2Fhot-games')">connectionsnyt</button>
+      <button class="button" onclick="changeIframe('https://www.thewordfinder.com/random-object-generator/')">Object gen</button>
+<button class="button" onclick="changeIframe('https://demo.emulatorjs.org')">emulatorJS</button>
+<button class="button" onclick="changeIframe('https://www.school0gy.com/')">Cool guy</button>
+<button class="button" onclick="changeIframe('https://thegportal.neocities.org')">Ghub</button>
+<button class="button" onclick="changeIframe('https://www.numuki.com')">Numuki</button>
+<button class="button" onclick="changeIframe('https://ccub.neocities.org')">Cookie clicker</button>
+<button class="button" onclick="changeIframe('https://www.jezng.com/open-syobon-action.js')">Cat mario</button>
+<button class="button" onclick="changeIframe('https://littlealchemy.com')">little alchemy</button>
+    </div>
+  </div>
+   <iframe id="myIframe" src="" width="100%" style="border:black;" allowfullscreen></iframe>
+
+
+  <!-- scripts -->
+  <script>
+    document.addEventListener('keydown', function (event) {
+      if (event.code === 'Backspace') {
+        window.location.href = 'https://www.google.com';
+      }
+    });
+
+    function changeIframe(url) {
+      var iframe = document.getElementById('myIframe');
+      iframe.src = url;
+
+      iframe.style.height = window.innerHeight + 'px';
+    }
+
+    window.onload = function() {
+      document.getElementById('myIframe').style.height = window.innerHeight + 'px';
+    };
+
+    window.onresize = function() {
+      document.getElementById('myIframe').style.height = window.innerHeight + 'px';
+    };
+
+    // Function to hide the overlay image
+    function hideOverlay() {
+      var overlayImage = document.getElementById('overlayImage');
+      overlayImage.style.display = 'none';
+    }
+  </script>
+  
+</body>
+</html>

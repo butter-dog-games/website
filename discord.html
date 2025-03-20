@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen WidgetBot</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #widget-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Fullscreen container for WidgetBot -->
+<div id="widget-container"></div>
+
+<!-- Load the WidgetBot crate library -->
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer></script>
+
+<!-- Initialize the WidgetBot crate -->
+<script>
+    new Crate({
+        server: '1345935650356199514',  // Your Discord server ID (MX/Butter Dog Games)
+        channel: '1345935650356199516', // The specific channel ID (#general)
+        shard: 'https://e.widgetbot.io'  // Optional: Shard for faster load (use default unless issues)
+    });
+</script>
+
+</body>
+</html>

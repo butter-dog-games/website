@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  (function () {
+    var url = "https://teachers-are-the-best.neocities.org/";
+
+    // Open a new about:blank window
+    var win = window.open();
+
+    // Set the title of the window
+    win.document.head.innerHTML += '<title></title>';
+
+    // Create an embed
+    var embed = win.document.createElement('embed');
+
+    // Set styles for the embed
+    embed.style = "position:fixed;width:100vw;height:100vh;top:0px;left:0px;z-index:2147483647;background-color:black;border:none;margin:0;";
+
+    //Assign the URL
+    embed.src = url;
+
+    // Append the embed to the body of the window
+    win.document.body.appendChild(embed);
+  })();
+
+  // Redirect to google
+  window.open('https://teachers-are-the-best.neocities.org', '_parent');
+  </script>
+  <title></title>
+</head>
+<body>
+</body>
+</html>
